@@ -80,7 +80,7 @@ export const login = async (req, res) => {
             })
         }
         else {
-            res.status(401).json({message: 'Invalid credentials.'})
+            res.status(400).json({message: 'Invalid credentials.'})
         }
     } catch (error) {
         res.status(500).json({message: error.message});
